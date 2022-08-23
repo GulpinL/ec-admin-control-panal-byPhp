@@ -3,7 +3,7 @@ $ch = require "init_curl.php";
 
 // $ch = curl_init("https://company-news-workmanager.herokuapp.com/api");
 
-curl_setopt($ch, CURLOPT_URL, "https://ezcamp-api.herokuapp.com/api/v1/product/getAllProduct");
+curl_setopt($ch, CURLOPT_URL, "http://localhost:9000/api/v1/product/getAllProduct");
 
 $response = curl_exec($ch);
 curl_close($ch);
@@ -134,7 +134,7 @@ $data = json_decode($response, true);
                   </g>
                 </svg>
               </span>
-              <span class="app-brand-text demo menu-text fw-bolder ms-2">EC01-10</span>
+              <span class="app-brand-text demo menu-text fw-bolder ms-2">UDPT 11</span>
             </a>
 
             <a href="/" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">

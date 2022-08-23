@@ -3,7 +3,7 @@ $ch = require "init_curl.php";
 
 // $ch = curl_init("https://company-news-workmanager.herokuapp.com/api");
 
-curl_setopt($ch, CURLOPT_URL, "https://ezcamp-api.herokuapp.com/api/v1/product/getAllProduct");
+curl_setopt($ch, CURLOPT_URL, "http://localhost:9000/api/v1/product/getAllProduct");
 
 $response = curl_exec($ch);
 curl_close($ch);
@@ -134,7 +134,7 @@ $data = json_decode($response, true);
                   </g>
                 </svg>
               </span>
-              <span class="app-brand-text demo menu-text fw-bolder ms-2">EC01-10</span>
+              <span class="app-brand-text demo menu-text fw-bolder ms-2">UDPT 11</span>
             </a>
 
             <a href="/" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -384,73 +384,162 @@ $data = json_decode($response, true);
           <!-- / Navbar -->
 
           <!-- Content wrapper -->
-         <!-- Content -->
+           <!-- Content -->
 
-         <div class="container-xxl flex-grow-1 container-p-y">
-              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Product Management /</span> Product List</h4>
+           <div class="container-xxl flex-grow-1 container-p-y">
+              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Account & Profile /</span> Profile</h4>
 
-         
+              <div class="row">
+                <div class="col-md-12">
+                  <ul class="nav nav-pills flex-column flex-md-row mb-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="./profile-service--profile.php"><i class="bx bx-user me-1"></i> Profile</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./profile-service--account.php"
+                        ><i class="bx bx-detail me-1"></i> Account</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./profile-service--change-password.php"
+                        ><i class="bx bx-lock-open-alt me-1"></i> Change Password</a>
+                      
+                    </li>
+                  </ul>
+                  <div class="card mb-4">
+                    <h5 class="card-header">Profile Details</h5>
+                    <!-- Account -->
+                    <div class="card-body">
+                      <div class="d-flex align-items-start align-items-sm-center gap-4">
+                        <img
+                          src=".//assets/img/avatars/1.png"
+                          alt="user-avatar"
+                          class="d-block rounded"
+                          height="100"
+                          width="100"
+                          id="uploadedAvatar"
+                        />
+                        <div class="button-wrapper">
+                          <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
+                            <span class="d-none d-sm-block">Upload new photo</span>
+                            <i class="bx bx-upload d-block d-sm-none"></i>
+                            <input
+                              type="file"
+                              id="upload"
+                              class="account-file-input"
+                              hidden
+                              accept="image/png, image/jpeg"
+                            />
+                          </label>
+                          <button type="button" class="btn btn-outline-secondary account-image-reset mb-4">
+                            <i class="bx bx-reset d-block d-sm-none"></i>
+                            <span class="d-none d-sm-block">Reset</span>
+                          </button>
 
-              <!-- Horizontal -->
-              <h5 class="pb-1 mb-4">Products</h5>
-
-              <div class="row mb-5">
-
-                <div class="col-md">
-                    <?php foreach($data as $monoclub): ?>
-                        <div class="card mb-3">
-
-
-                    <div class="row g-0">
-
-                      <div class="col-md-2">
-                        <img class="card-img card-img-left" src="<?php echo ($monoclub['thumbnail']); ?>" alt="Card image" />
-                      </div>
-
-                      <div class="col-md-8">
-                        <div class="card-body">
-                        <h5 class="card-title"><?php echo ($monoclub['title']); ?></h5>
-                          <p class="card-text">
-                            <?php echo ($monoclub['description']); ?>
-                          </p>
-                          <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                          <p class="text-muted mb-0">Allowed JPG, GIF or PNG. Max size of 800K</p>
                         </div>
                       </div>
-
-                      <div class="col-md-1">
-                        <div class="card-body">
-                          <a href="javascript:void(0)" class="btn btn-outline-primary">Update</a>
-                        </div>
-                      </div>
-
                     </div>
+                    <hr class="my-0" />
+                    <div class="card-body">
+                      <form id="formAccountSettings" method="POST" onsubmit="return false">
+                        <div class="row">
+                          <div class="mb-3 col-md-6">
+                            <label for="firstName" class="form-label">Name</label>
+                            <input
+                              class="form-control"
+                              type="text"
+                              id="firstName"
+                              name="firstName"
+                              value="John"
+                              autofocus
+                            />
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="lastName" class="form-label">Gender</label>
+                            <input class="form-control" type="text" name="lastName" id="lastName" value="Male" />
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input
+                              class="form-control"
+                              type="text"
+                              id="email"
+                              name="email"
+                              value="john.doe@example.com"
+                              placeholder="john.doe@example.com"
+                            />
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="organization" class="form-label">Day of birth</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="organization"
+                              name="organization"
+                              value="06 / 05/ 2000"
+                            />
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label class="form-label" for="phoneNumber">Phone Number</label>
+                            <div class="input-group input-group-merge">
+                              <span class="input-group-text">VN (+84)</span>
+                              <input
+                                type="text"
+                                id="phoneNumber"
+                                name="phoneNumber"
+                                class="form-control"
+                                placeholder="202 555 0111"
+                              />
+                            </div>
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="address" name="address" placeholder="Q1, HCM city" />
+                          </div>
+                      
+                          <div class="mb-3 col-md-6">
+                            <label for="zipCode" class="form-label">CMND</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="zipCode"
+                              name="zipCode"
+                              placeholder="231465"
+                              maxlength="6"
+                            />
+                          </div>
 
+                          <div class="mb-3 col-md-6">
+                            <label for="zipCode" class="form-label">Type of Employee</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="zipCode"
+                              name="zipCode"
+                              placeholder="Staff"
+                              maxlength="6"
+                            />
+                          </div>
+                          
+                            
+                       
+                        </div>
+                        <!-- <div class="mt-2">
+                          <button type="submit" class="btn btn-primary me-2">Save changes</button>
+                          <button type="reset" class="btn btn-outline-secondary">Cancel</button>
+                        </div> -->
+                      </form>
+                    </div>
+                    <!-- /Account -->
+                  </div>
+                
                 </div>
-                    <?php endforeach; ?>
-
-                </div>
-
-
-
-
-
-
-
-
-               
               </div>
-              <!--/ Horizontal -->
-
-            
-              
-
-              
-
-              
-              <!--/ Card layout -->
             </div>
             <!-- / Content -->
-
+            
+            <!-- / Content -->
 
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">

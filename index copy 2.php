@@ -1,19 +1,3 @@
-<?php
-$ch = require "init_curl.php";
-
-// $ch = curl_init("https://company-news-workmanager.herokuapp.com/api");
-
-curl_setopt($ch, CURLOPT_URL, "https://ezcamp-api.herokuapp.com/api/v1/product/getAllProduct");
-
-$response = curl_exec($ch);
-curl_close($ch);
-
-$data = json_decode($response, true);
-
-
-?>
-
-
 <!DOCTYPE html>
 
 
@@ -22,7 +6,7 @@ $data = json_decode($response, true);
   class="light-style layout-menu-fixed"
   dir="ltr"
   data-theme="theme-default"
-  data-assets-path=".//assets/"
+  data-assets-path="./assets/"
   data-template="vertical-menu-template-free"
 >
   <head>
@@ -37,7 +21,7 @@ $data = json_decode($response, true);
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href=".//assets/img/favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon/favicon.ico" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -48,26 +32,26 @@ $data = json_decode($response, true);
     />
 
     <!-- Icons. Uncomment required icon fonts -->
-    <link rel="stylesheet" href=".//assets/vendor/fonts/boxicons.css" />
+    <link rel="stylesheet" href="./assets/vendor/fonts/boxicons.css" />
 
     <!-- Core CSS -->
-    <link rel="stylesheet" href=".//assets/vendor/css/core.css" class="template-customizer-core-css" />
-    <link rel="stylesheet" href=".//assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href=".//assets/css/demo.css" />
+    <link rel="stylesheet" href="./assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="./assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="./assets/css/demo.css" />
 
     <!-- Vendors CSS -->
-    <link rel="stylesheet" href=".//assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
-    <link rel="stylesheet" href=".//assets/vendor/libs/apex-charts/apex-charts.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/apex-charts/apex-charts.css" />
 
     <!-- Page CSS -->
 
     <!-- Helpers -->
-    <script src=".//assets/vendor/js/helpers.js"></script>
+    <script src="./assets/vendor/js/helpers.js"></script>
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src=".//assets/js/config.js"></script>
+    <script src="./assets/js/config.js"></script>
   </head>
 
   <body>
@@ -78,7 +62,7 @@ $data = json_decode($response, true);
 
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
-            <a href="/" class="app-brand-link">
+            <a href="./" class="app-brand-link">
               <span class="app-brand-logo demo">
                 <svg
                   width="25"
@@ -134,10 +118,10 @@ $data = json_decode($response, true);
                   </g>
                 </svg>
               </span>
-              <span class="app-brand-text demo menu-text fw-bolder ms-2">EC01-10</span>
+              <span class="app-brand-text demo menu-text fw-bolder ms-2">UDPT 11</span>
             </a>
 
-            <a href="/" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+            <a href="./" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
               <i class="bx bx-chevron-left bx-sm align-middle"></i>
             </a>
           </div>
@@ -147,7 +131,7 @@ $data = json_decode($response, true);
           <ul class="menu-inner py-1">
             <!-- Home -->
             <li class="menu-item active">
-              <a href="/" class="menu-link">
+              <a href="./" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Home</div>
               </a>
@@ -156,16 +140,37 @@ $data = json_decode($response, true);
            
 
             <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">Delivery</span>
+              <span class="menu-header-text">Work</span>
             </li>
 
 
             <li class="menu-item">
-              <a href="./check-in-service--check-in.php" class="menu-link">
+              <a href="./check-in-service--check-in.php" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-check-circle"></i>
-                <div data-i18n="Account Settings">Delivery</div>
+                <div data-i18n="Account Settings">Check in</div>
               </a>
-              
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="./check-in-service--check-in.php" class="menu-link">
+                    <div data-i18n="Account">Check in</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="check-in-service--project.php" class="menu-link">
+                    <div data-i18n="Notifications">Project</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="check-in-service--task.php" class="menu-link">
+                    <div data-i18n="Connections">Task</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="check-in-service--team.php" class="menu-link">
+                    <div data-i18n="Connections">Team</div>
+                  </a>
+                </li>
+              </ul>
             </li>
 
 
@@ -173,23 +178,17 @@ $data = json_decode($response, true);
               <a href="work-from-home-service--request-wfh.php" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-briefcase"></i>
                 <!-- <i class='bx bx-signal-5'></i> -->
-                <div data-i18n="Authentications">Order Management</div>
+                <div data-i18n="Authentications">Work From Home</div>
               </a>
               <ul class="menu-sub">
                 <li class="menu-item">
                   <a href="work-from-home-service--request-wfh.php" class="menu-link" >
-                    <div data-i18n="Basic">Waiting Order</div>
+                    <div data-i18n="Basic">Request WFH</div>
                   </a>
                 </li>
                 <li class="menu-item">
                   <a href="work-from-home-service--history-record.php" class="menu-link" >
-                    <div data-i18n="Basic">Delivering Order</div>
-                  </a>
-                </li>
-
-                <li class="menu-item">
-                  <a href="work-from-home-service--history-record.php" class="menu-link" >
-                    <div data-i18n="Basic">Cancel Order</div>
+                    <div data-i18n="Basic">History WFH</div>
                   </a>
                 </li>
                 
@@ -200,22 +199,17 @@ $data = json_decode($response, true);
             <li class="menu-item">
               <a href="overtime-service--request-ot.php" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-timer"></i>
-                <div data-i18n="Misc">Item Management</div>
+                <div data-i18n="Misc">Over Time</div>
               </a>
               <ul class="menu-sub">
                 <li class="menu-item">
                   <a href="overtime-service--request-ot.php" class="menu-link">
-                    <div data-i18n="Error">Item List</div>
+                    <div data-i18n="Error">Request OT</div>
                   </a>
                 </li>
                 <li class="menu-item">
                   <a href="overtime-service--history-record.php" class="menu-link">
-                    <div data-i18n="Under Maintenance">Add item</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="overtime-service--history-record.php" class="menu-link">
-                    <div data-i18n="Under Maintenance">Invalid/Reported Item</div>
+                    <div data-i18n="Under Maintenance">History OT</div>
                   </a>
                 </li>
               </ul>
@@ -229,34 +223,24 @@ $data = json_decode($response, true);
             <li class="menu-item">
               <a href="holiday-service--holiday-list.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-calendar"></i>
-                <div data-i18n="Basic">Marketing</div>
+                <div data-i18n="Basic">Holiday</div>
               </a>
             </li>
             <!-- day off -->
             <li class="menu-item">
               <a href="day-off-service--request-day-off.php" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-calendar-x"></i>
-                <div data-i18n="User interface">Statistics / Income</div>
+                <div data-i18n="User interface">Day off</div>
               </a>
               <ul class="menu-sub">
                 <li class="menu-item">
                   <a href="day-off-service--request-day-off.php" class="menu-link">
-                    <div data-i18n="Accordion">Income</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="day-off-service--request-day-off.php" class="menu-link">
-                    <div data-i18n="Accordion">Statistics</div>
+                    <div data-i18n="Accordion">Request Day Off</div>
                   </a>
                 </li>
                 <li class="menu-item">
                   <a href="day-off-service--day-off-record.php" class="menu-link">
-                    <div data-i18n="Alerts">Paypal</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="day-off-service--day-off-record.php" class="menu-link">
-                    <div data-i18n="Alerts">Momo</div>
+                    <div data-i18n="Alerts">Your day off</div>
                   </a>
                 </li>
                 
@@ -264,10 +248,84 @@ $data = json_decode($response, true);
               </ul>
             </li>
 
-            
+            <!-- Salary -->
+            <li class="menu-item">
+              <a href="salary-service--summary-salary.php" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-wallet-alt"></i>
+                <!-- <i class='bx bx-wallet-alt'></i> -->
+                <div data-i18n="Extended UI">Salary</div>
+              </a>
+              
+            </li>
 
-          
-        </ul>
+            <!-- Accounting , Profile, Logout -->
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Account &amp; Profile</span></li>
+            <!-- Account Profile -->
+            <li class="menu-item">
+              <a href="profile-service--profile.php" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-user"></i>
+                <div data-i18n="Form Elements">Profile</div>
+              </a>
+            </li>
+
+            <li class="menu-item">
+              <a href="profile-service--account.php" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-detail"></i>
+                <div data-i18n="Form Elements">Account</div>
+              </a>
+            </li>
+
+            <li class="menu-item">
+              <a href="profile-service--change-password.php" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+                <div data-i18n="Form Elements">Change Password</div>
+              </a>
+            </li>
+           
+           
+            <!-- Other -->
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Support</span></li>
+            <li class="menu-item">
+              <a
+                href="support-service--request-form.php"
+                class="menu-link"
+              >
+                <i class="menu-icon tf-icons bx bx-support"></i>
+                <div data-i18n="Support">Support Mail Form Request</div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a
+                href="company-news-service--news-list.php"
+                target="_blank"
+                class="menu-link"
+              >
+                <i class="menu-icon tf-icons bx bxs-news"></i>
+                <div data-i18n="Documentation">Company News</div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a
+                href="company-news-service--news-list.php"
+                target="_blank"
+                class="menu-link"
+              >
+                <i class="menu-icon tf-icons bx bxs-bell"></i>
+                <div data-i18n="Documentation">Notifications</div>
+              </a>
+            </li>
+            <!-- Log out ! -->
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">LOG OUT</span></li>
+            <li class="menu-item">
+              <a
+                href="logout.php"
+                class="menu-link"
+              >
+                <i class="menu-icon tf-icons bx bx-power-off"></i>
+                <div data-i18n="Support">Log out</div>
+              </a>
+            </li>
+          </ul>
         </aside>
    
 
@@ -309,7 +367,7 @@ $data = json_decode($response, true);
                 <li class="nav-item lh-1 me-3">
                   <a
                     class="github-button"
-                    href="/"
+                    href="./"
                     data-icon="octicon-star"
                     data-size="large"
                     data-show-count="true"
@@ -322,7 +380,7 @@ $data = json_decode($response, true);
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="profile-service--profile.php" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                      <img src=".//assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                      <img src="./assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
@@ -331,7 +389,7 @@ $data = json_decode($response, true);
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar avatar-online">
-                              <img src=".//assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                              <img src="./assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
                             </div>
                           </div>
                           <div class="flex-grow-1">
@@ -384,73 +442,162 @@ $data = json_decode($response, true);
           <!-- / Navbar -->
 
           <!-- Content wrapper -->
-         <!-- Content -->
+           <!-- Content -->
 
-         <div class="container-xxl flex-grow-1 container-p-y">
-              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Product Management /</span> Product List</h4>
+           <div class="container-xxl flex-grow-1 container-p-y">
+              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Account & Profile /</span> Profile</h4>
 
-         
+              <div class="row">
+                <div class="col-md-12">
+                  <ul class="nav nav-pills flex-column flex-md-row mb-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="./profile-service--profile.php"><i class="bx bx-user me-1"></i> Profile</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./profile-service--account.php"
+                        ><i class="bx bx-detail me-1"></i> Account</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./profile-service--change-password.php"
+                        ><i class="bx bx-lock-open-alt me-1"></i> Change Password</a>
+                      
+                    </li>
+                  </ul>
+                  <div class="card mb-4">
+                    <h5 class="card-header">Profile Details</h5>
+                    <!-- Account -->
+                    <div class="card-body">
+                      <div class="d-flex align-items-start align-items-sm-center gap-4">
+                        <img
+                          src="./assets/img/avatars/1.png"
+                          alt="user-avatar"
+                          class="d-block rounded"
+                          height="100"
+                          width="100"
+                          id="uploadedAvatar"
+                        />
+                        <div class="button-wrapper">
+                          <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
+                            <span class="d-none d-sm-block">Upload new photo</span>
+                            <i class="bx bx-upload d-block d-sm-none"></i>
+                            <input
+                              type="file"
+                              id="upload"
+                              class="account-file-input"
+                              hidden
+                              accept="image/png, image/jpeg"
+                            />
+                          </label>
+                          <button type="button" class="btn btn-outline-secondary account-image-reset mb-4">
+                            <i class="bx bx-reset d-block d-sm-none"></i>
+                            <span class="d-none d-sm-block">Reset</span>
+                          </button>
 
-              <!-- Horizontal -->
-              <h5 class="pb-1 mb-4">Products</h5>
-
-              <div class="row mb-5">
-
-                <div class="col-md">
-                    <?php foreach($data as $monoclub): ?>
-                        <div class="card mb-3">
-
-
-                    <div class="row g-0">
-
-                      <div class="col-md-2">
-                        <img class="card-img card-img-left" src="<?php echo ($monoclub['thumbnail']); ?>" alt="Card image" />
-                      </div>
-
-                      <div class="col-md-8">
-                        <div class="card-body">
-                        <h5 class="card-title"><?php echo ($monoclub['title']); ?></h5>
-                          <p class="card-text">
-                            <?php echo ($monoclub['description']); ?>
-                          </p>
-                          <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                          <p class="text-muted mb-0">Allowed JPG, GIF or PNG. Max size of 800K</p>
                         </div>
                       </div>
-
-                      <div class="col-md-1">
-                        <div class="card-body">
-                          <a href="javascript:void(0)" class="btn btn-outline-primary">Update</a>
-                        </div>
-                      </div>
-
                     </div>
+                    <hr class="my-0" />
+                    <div class="card-body">
+                      <form id="formAccountSettings" method="POST" onsubmit="return false">
+                        <div class="row">
+                          <div class="mb-3 col-md-6">
+                            <label for="firstName" class="form-label">Name</label>
+                            <input
+                              class="form-control"
+                              type="text"
+                              id="firstName"
+                              name="firstName"
+                              value="John"
+                              autofocus
+                            />
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="lastName" class="form-label">Gender</label>
+                            <input class="form-control" type="text" name="lastName" id="lastName" value="Male" />
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input
+                              class="form-control"
+                              type="text"
+                              id="email"
+                              name="email"
+                              value="john.doe@example.com"
+                              placeholder="john.doe@example.com"
+                            />
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="organization" class="form-label">Day of birth</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="organization"
+                              name="organization"
+                              value="06 / 05/ 2000"
+                            />
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label class="form-label" for="phoneNumber">Phone Number</label>
+                            <div class="input-group input-group-merge">
+                              <span class="input-group-text">VN (+84)</span>
+                              <input
+                                type="text"
+                                id="phoneNumber"
+                                name="phoneNumber"
+                                class="form-control"
+                                placeholder="202 555 0111"
+                              />
+                            </div>
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="address" name="address" placeholder="Q1, HCM city" />
+                          </div>
+                      
+                          <div class="mb-3 col-md-6">
+                            <label for="zipCode" class="form-label">CMND</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="zipCode"
+                              name="zipCode"
+                              placeholder="231465"
+                              maxlength="6"
+                            />
+                          </div>
 
+                          <div class="mb-3 col-md-6">
+                            <label for="zipCode" class="form-label">Type of Employee</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="zipCode"
+                              name="zipCode"
+                              placeholder="Staff"
+                              maxlength="6"
+                            />
+                          </div>
+                          
+                            
+                       
+                        </div>
+                        <!-- <div class="mt-2">
+                          <button type="submit" class="btn btn-primary me-2">Save changes</button>
+                          <button type="reset" class="btn btn-outline-secondary">Cancel</button>
+                        </div> -->
+                      </form>
+                    </div>
+                    <!-- /Account -->
+                  </div>
+                
                 </div>
-                    <?php endforeach; ?>
-
-                </div>
-
-
-
-
-
-
-
-
-               
               </div>
-              <!--/ Horizontal -->
-
-            
-              
-
-              
-
-              
-              <!--/ Card layout -->
             </div>
             <!-- / Content -->
-
+            
+            <!-- / Content -->
 
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
@@ -501,22 +648,22 @@ $data = json_decode($response, true);
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
-    <script src=".//assets/vendor/libs/jquery/jquery.js"></script>
-    <script src=".//assets/vendor/libs/popper/popper.js"></script>
-    <script src=".//assets/vendor/js/bootstrap.js"></script>
-    <script src=".//assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="./assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="./assets/vendor/libs/popper/popper.js"></script>
+    <script src="./assets/vendor/js/bootstrap.js"></script>
+    <script src="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-    <script src=".//assets/vendor/js/menu.js"></script>
+    <script src="./assets/vendor/js/menu.js"></script>
     <!-- endbuild -->
 
     <!-- Vendors JS -->
-    <script src=".//assets/vendor/libs/apex-charts/apexcharts.js"></script>
+    <script src="./assets/vendor/libs/apex-charts/apexcharts.js"></script>
 
     <!-- Main JS -->
-    <script src=".//assets/js/main.js"></script>
+    <script src="./assets/js/main.js"></script>
 
     <!-- Page JS -->
-    <script src=".//assets/js/dashboards-analytics.js"></script>
+    <script src="./assets/js/dashboards-analytics.js"></script>
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
