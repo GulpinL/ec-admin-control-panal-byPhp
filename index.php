@@ -1,19 +1,11 @@
-<?php
-$ch = require "init_curl.php";
-
-// $ch = curl_init("https://company-news-workmanager.herokuapp.com/api");
-
-curl_setopt($ch, CURLOPT_URL, "https://ezcamp-api.herokuapp.com/api/v1/product/getAllProduct");
-
-$response = curl_exec($ch);
-curl_close($ch);
-
-$data = json_decode($response, true);
-
-
+<?php 
+session_start();
+session_regenerate_id();
+if(!isset($_SESSION['key']))      // if there is no valid session
+{
+    header("Location: ./_layout.php");
+}
 ?>
-
-
 <!DOCTYPE html>
 
 
@@ -147,7 +139,7 @@ $data = json_decode($response, true);
           <ul class="menu-inner py-1">
             <!-- Home -->
             <li class="menu-item active">
-              <a href="/" class="menu-link">
+              <a href="_layout.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Home</div>
               </a>

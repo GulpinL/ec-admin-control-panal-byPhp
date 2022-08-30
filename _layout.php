@@ -6,7 +6,7 @@
   class="light-style layout-menu-fixed"
   dir="ltr"
   data-theme="theme-default"
-  data-assets-path=".././assets/"
+  data-assets-path=".//assets/"
   data-template="vertical-menu-template-free"
 >
   <head>
@@ -21,7 +21,7 @@
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href=".././assets/img/favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href=".//assets/img/favicon/favicon.ico" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,26 +32,26 @@
     />
 
     <!-- Icons. Uncomment required icon fonts -->
-    <link rel="stylesheet" href=".././assets/vendor/fonts/boxicons.css" />
+    <link rel="stylesheet" href=".//assets/vendor/fonts/boxicons.css" />
 
     <!-- Core CSS -->
-    <link rel="stylesheet" href=".././assets/vendor/css/core.css" class="template-customizer-core-css" />
-    <link rel="stylesheet" href=".././assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href=".././assets/css/demo.css" />
+    <link rel="stylesheet" href=".//assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href=".//assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href=".//assets/css/demo.css" />
 
     <!-- Vendors CSS -->
-    <link rel="stylesheet" href=".././assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href=".//assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
-    <link rel="stylesheet" href=".././assets/vendor/libs/apex-charts/apex-charts.css" />
+    <link rel="stylesheet" href=".//assets/vendor/libs/apex-charts/apex-charts.css" />
 
     <!-- Page CSS -->
 
     <!-- Helpers -->
-    <script src=".././assets/vendor/js/helpers.js"></script>
+    <script src=".//assets/vendor/js/helpers.js"></script>
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src=".././assets/js/config.js"></script>
+    <script src=".//assets/js/config.js"></script>
   </head>
 
   <body>
@@ -62,7 +62,7 @@
 
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
-            <a href=".././" class="app-brand-link">
+            <a href="/" class="app-brand-link">
               <span class="app-brand-logo demo">
                 <svg
                   width="25"
@@ -118,10 +118,10 @@
                   </g>
                 </svg>
               </span>
-              <span class="app-brand-text demo menu-text fw-bolder ms-2">UDPT 11</span>
+              <span class="app-brand-text demo menu-text fw-bolder ms-2">EC01-10</span>
             </a>
 
-            <a href=".././" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+            <a href="/" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
               <i class="bx bx-chevron-left bx-sm align-middle"></i>
             </a>
           </div>
@@ -131,7 +131,7 @@
           <ul class="menu-inner py-1">
             <!-- Home -->
             <li class="menu-item active">
-              <a href=".././" class="menu-link">
+              <a href="./" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Home</div>
               </a>
@@ -140,55 +140,40 @@
            
 
             <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">Work</span>
+              <span class="menu-header-text">Delivery</span>
             </li>
 
 
             <li class="menu-item">
-              <a href="./check-in-service--check-in.php" class="menu-link menu-toggle">
+              <a href="_layout.php?phphref=delivery.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-check-circle"></i>
-                <div data-i18n="Account Settings">Check in</div>
+                <div data-i18n="Account Settings">Delivery</div>
               </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="./check-in-service--check-in.php" class="menu-link">
-                    <div data-i18n="Account">Check in</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="check-in-service--project.php" class="menu-link">
-                    <div data-i18n="Notifications">Project</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="check-in-service--task.php" class="menu-link">
-                    <div data-i18n="Connections">Task</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="check-in-service--team.php" class="menu-link">
-                    <div data-i18n="Connections">Team</div>
-                  </a>
-                </li>
-              </ul>
+              
             </li>
 
 
             <li class="menu-item">
-              <a href="work-from-home-service--request-wfh.php" class="menu-link menu-toggle">
+              <a href="_layout.php?phphref=order--waiting-order.php" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-briefcase"></i>
                 <!-- <i class='bx bx-signal-5'></i> -->
-                <div data-i18n="Authentications">Work From Home</div>
+                <div data-i18n="Authentications">Order Management</div>
               </a>
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="work-from-home-service--request-wfh.php" class="menu-link" >
-                    <div data-i18n="Basic">Request WFH</div>
+                  <a href="_layout.php?phphref=order--waiting-order.php" class="menu-link" >
+                    <div data-i18n="Basic">Waiting Order</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="work-from-home-service--history-record.php" class="menu-link" >
-                    <div data-i18n="Basic">History WFH</div>
+                  <a href="_layout.php?phphref=order--deliverying-order.php" class="menu-link" >
+                    <div data-i18n="Basic">Delivering Order</div>
+                  </a>
+                </li>
+
+                <li class="menu-item">
+                  <a href="_layout.php?phphref=order--canceled-order.php" class="menu-link" >
+                    <div data-i18n="Basic">Canceled Order</div>
                   </a>
                 </li>
                 
@@ -197,19 +182,24 @@
 
 
             <li class="menu-item">
-              <a href="overtime-service--request-ot.php" class="menu-link menu-toggle">
+              <a href="_layout.php?phphref=item-manager--item-list.php" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-timer"></i>
-                <div data-i18n="Misc">Over Time</div>
+                <div data-i18n="Misc">Item Management</div>
               </a>
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="overtime-service--request-ot.php" class="menu-link">
-                    <div data-i18n="Error">Request OT</div>
+                  <a href="_layout.php?phphref=item-manager--item-list.php" class="menu-link">
+                    <div data-i18n="Error">Item List</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="overtime-service--history-record.php" class="menu-link">
-                    <div data-i18n="Under Maintenance">History OT</div>
+                  <a href="_layout.php?phphref=item-manager--add-item.php" class="menu-link">
+                    <div data-i18n="Under Maintenance">Add item</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="_layout.php?phphref=item-manager--invalid-item.php" class="menu-link">
+                    <div data-i18n="Under Maintenance">Invalid/Reported Item</div>
                   </a>
                 </li>
               </ul>
@@ -217,30 +207,40 @@
 
 
             <!-- salary, day off, holiday, your day off remain -->
-            <li class="menu-header small text-uppercase"><span class="menu-header-text">Salary & Day off</span></li>
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">marketing</span></li>
             
             <!-- holiday -->
             <li class="menu-item">
-              <a href="holiday-service--holiday-list.php" class="menu-link">
+              <a href="_layout.php?phphref=marketing.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-calendar"></i>
-                <div data-i18n="Basic">Holiday</div>
+                <div data-i18n="Basic">Marketing</div>
               </a>
             </li>
             <!-- day off -->
             <li class="menu-item">
-              <a href="day-off-service--request-day-off.php" class="menu-link menu-toggle">
+              <a href="_layout.php?phphref=statistic-income--income.php" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-calendar-x"></i>
-                <div data-i18n="User interface">Day off</div>
+                <div data-i18n="User interface">Statistics / Income</div>
               </a>
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="day-off-service--request-day-off.php" class="menu-link">
-                    <div data-i18n="Accordion">Request Day Off</div>
+                  <a href="_layout.php?phphref=statistic-income--income.php" class="menu-link">
+                    <div data-i18n="Accordion">Income</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="day-off-service--day-off-record.php" class="menu-link">
-                    <div data-i18n="Alerts">Your day off</div>
+                  <a href="_layout.php?phphref=statistic-income--statistics.php" class="menu-link">
+                    <div data-i18n="Accordion">Statistics</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="_layout.php?phphref=statistic-income--paypal.php" class="menu-link">
+                    <div data-i18n="Alerts">Paypal</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="_layout.php?phphref=statistic-income--momo.php" class="menu-link">
+                    <div data-i18n="Alerts">Momo</div>
                   </a>
                 </li>
                 
@@ -248,84 +248,10 @@
               </ul>
             </li>
 
-            <!-- Salary -->
-            <li class="menu-item">
-              <a href="salary-service--summary-salary.php" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-wallet-alt"></i>
-                <!-- <i class='bx bx-wallet-alt'></i> -->
-                <div data-i18n="Extended UI">Salary</div>
-              </a>
-              
-            </li>
+            
 
-            <!-- Accounting , Profile, Logout -->
-            <li class="menu-header small text-uppercase"><span class="menu-header-text">Account &amp; Profile</span></li>
-            <!-- Account Profile -->
-            <li class="menu-item">
-              <a href="profile-service--profile.php" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-user"></i>
-                <div data-i18n="Form Elements">Profile</div>
-              </a>
-            </li>
-
-            <li class="menu-item">
-              <a href="profile-service--account.php" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-detail"></i>
-                <div data-i18n="Form Elements">Account</div>
-              </a>
-            </li>
-
-            <li class="menu-item">
-              <a href="profile-service--change-password.php" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
-                <div data-i18n="Form Elements">Change Password</div>
-              </a>
-            </li>
-           
-           
-            <!-- Other -->
-            <li class="menu-header small text-uppercase"><span class="menu-header-text">Support</span></li>
-            <li class="menu-item">
-              <a
-                href="support-service--request-form.php"
-                class="menu-link"
-              >
-                <i class="menu-icon tf-icons bx bx-support"></i>
-                <div data-i18n="Support">Support Mail Form Request</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a
-                href="company-news-service--news-list.php"
-                target="_blank"
-                class="menu-link"
-              >
-                <i class="menu-icon tf-icons bx bxs-news"></i>
-                <div data-i18n="Documentation">Company News</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a
-                href="company-news-service--news-list.php"
-                target="_blank"
-                class="menu-link"
-              >
-                <i class="menu-icon tf-icons bx bxs-bell"></i>
-                <div data-i18n="Documentation">Notifications</div>
-              </a>
-            </li>
-            <!-- Log out ! -->
-            <li class="menu-header small text-uppercase"><span class="menu-header-text">LOG OUT</span></li>
-            <li class="menu-item">
-              <a
-                href="logout.php"
-                class="menu-link"
-              >
-                <i class="menu-icon tf-icons bx bx-power-off"></i>
-                <div data-i18n="Support">Log out</div>
-              </a>
-            </li>
-          </ul>
+          
+        </ul>
         </aside>
    
 
@@ -367,7 +293,7 @@
                 <li class="nav-item lh-1 me-3">
                   <a
                     class="github-button"
-                    href=".././"
+                    href="/"
                     data-icon="octicon-star"
                     data-size="large"
                     data-show-count="true"
@@ -380,7 +306,7 @@
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="profile-service--profile.php" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                      <img src=".././assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                      <img src=".//assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
@@ -389,7 +315,7 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar avatar-online">
-                              <img src=".././assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                              <img src=".//assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
                             </div>
                           </div>
                           <div class="flex-grow-1">
@@ -440,13 +366,19 @@
           </nav>
 
           <!-- / Navbar -->
+          <div class="content-wrapper">
+         <div class="container-xxl flex-grow-1 container-p-y">
+              
 
-          <!-- Content wrapper -->
-           <!-- Content -->
-                <p class="text-center">CHECK IN _ checkin</p>
-            
-            <!-- / Content -->
-
+         <?php
+                                if(isset($_GET)){
+                                        include($_GET['phphref']);
+                                }
+                             ?>
+        </div>  
+              <!--/ Horizontal -->
+              <!--/ Card layout -->
+            </div>
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
               <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
@@ -496,22 +428,22 @@
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
-    <script src=".././assets/vendor/libs/jquery/jquery.js"></script>
-    <script src=".././assets/vendor/libs/popper/popper.js"></script>
-    <script src=".././assets/vendor/js/bootstrap.js"></script>
-    <script src=".././assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src=".//assets/vendor/libs/jquery/jquery.js"></script>
+    <script src=".//assets/vendor/libs/popper/popper.js"></script>
+    <script src=".//assets/vendor/js/bootstrap.js"></script>
+    <script src=".//assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-    <script src=".././assets/vendor/js/menu.js"></script>
+    <script src=".//assets/vendor/js/menu.js"></script>
     <!-- endbuild -->
 
     <!-- Vendors JS -->
-    <script src=".././assets/vendor/libs/apex-charts/apexcharts.js"></script>
+    <script src=".//assets/vendor/libs/apex-charts/apexcharts.js"></script>
 
     <!-- Main JS -->
-    <script src=".././assets/js/main.js"></script>
+    <script src=".//assets/js/main.js"></script>
 
     <!-- Page JS -->
-    <script src=".././assets/js/dashboards-analytics.js"></script>
+    <script src=".//assets/js/dashboards-analytics.js"></script>
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>

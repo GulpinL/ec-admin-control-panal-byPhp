@@ -1,3 +1,11 @@
+<?php 
+session_start();
+session_regenerate_id();
+if(!isset($_SESSION['key']))      // if there is no valid session
+{
+    header("Location: .././login.php");
+}
+?>
 <!DOCTYPE html>
 
 
@@ -145,23 +153,23 @@
 
 
             <li class="menu-item">
-              <a href="./check-in-service--check-in.php" class="menu-link menu-toggle">
+              <a href="layout2.php?phphref=check-in-service--check-in.php" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-check-circle"></i>
                 <div data-i18n="Account Settings">Check in</div>
               </a>
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="./check-in-service--check-in.php" class="menu-link">
+                  <a href="layout2.php?phphref=check-in-service--check-in.php" class="menu-link">
                     <div data-i18n="Account">Check in</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="check-in-service--project.php" class="menu-link">
+                  <a href="layout2.php?phphref=check-in-service--project.php" class="menu-link">
                     <div data-i18n="Notifications">Project</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="check-in-service--task.php" class="menu-link">
+                  <a href="layout2.php?phphref=check-in-service--task.php" class="menu-link">
                     <div data-i18n="Connections">Task</div>
                   </a>
                 </li>
@@ -175,19 +183,20 @@
 
 
             <li class="menu-item">
-              <a href="work-from-home-service--request-wfh.php" class="menu-link menu-toggle">
+              <a href="layout2.php?phphref=work-from-home-service--request-wfh.php" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-briefcase"></i>
                 <!-- <i class='bx bx-signal-5'></i> -->
                 <div data-i18n="Authentications">Work From Home</div>
               </a>
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="work-from-home-service--request-wfh.php" class="menu-link" >
+                  <a href="layout2.php?phphref=work-from-home-service--request-wfh.php" class="menu-link" >
+                  <!-- layout2.php?phphref=profile-service--profile.php -->
                     <div data-i18n="Basic">Request WFH</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="work-from-home-service--history-record.php" class="menu-link" >
+                  <a href="layout2.php?phphref=work-from-home-service--history-record.php" class="menu-link" >
                     <div data-i18n="Basic">History WFH</div>
                   </a>
                 </li>
@@ -197,18 +206,18 @@
 
 
             <li class="menu-item">
-              <a href="overtime-service--request-ot.php" class="menu-link menu-toggle">
+              <a href="" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-timer"></i>
                 <div data-i18n="Misc">Over Time</div>
               </a>
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="overtime-service--request-ot.php" class="menu-link">
+                  <a href="layout2.php?phphref=overtime-service--request-ot.php" class="menu-link">
                     <div data-i18n="Error">Request OT</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="overtime-service--history-record.php" class="menu-link">
+                  <a href="layout2.php?phphref=overtime-service--history-record.php" class="menu-link">
                     <div data-i18n="Under Maintenance">History OT</div>
                   </a>
                 </li>
@@ -221,25 +230,25 @@
             
             <!-- holiday -->
             <li class="menu-item">
-              <a href="holiday-service--holiday-list.php" class="menu-link">
+              <a href="layout2.php?phphref=holiday-service--holiday-list.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-calendar"></i>
                 <div data-i18n="Basic">Holiday</div>
               </a>
             </li>
             <!-- day off -->
             <li class="menu-item">
-              <a href="day-off-service--request-day-off.php" class="menu-link menu-toggle">
+              <a href="layout2.php?phphref=day-off-service--request-day-off.php" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-calendar-x"></i>
                 <div data-i18n="User interface">Day off</div>
               </a>
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="day-off-service--request-day-off.php" class="menu-link">
+                  <a href="layout2.php?phphref=day-off-service--request-day-off.php" class="menu-link">
                     <div data-i18n="Accordion">Request Day Off</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="day-off-service--day-off-record.php" class="menu-link">
+                  <a href="layout2.php?phphref=day-off-service--day-off-record.php" class="menu-link">
                     <div data-i18n="Alerts">Your day off</div>
                   </a>
                 </li>
@@ -250,7 +259,7 @@
 
             <!-- Salary -->
             <li class="menu-item">
-              <a href="salary-service--summary-salary.php" class="menu-link">
+              <a href="layout2.php?phphref=salary-service--summary-salary.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-wallet-alt"></i>
                 <!-- <i class='bx bx-wallet-alt'></i> -->
                 <div data-i18n="Extended UI">Salary</div>
@@ -262,21 +271,21 @@
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Account &amp; Profile</span></li>
             <!-- Account Profile -->
             <li class="menu-item">
-              <a href="profile-service--profile.php" class="menu-link">
+              <a href="layout2.php?phphref=profile-service--profile.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-user"></i>
                 <div data-i18n="Form Elements">Profile</div>
               </a>
             </li>
 
             <li class="menu-item">
-              <a href="profile-service--account.php" class="menu-link">
+              <a href="layout2.php?phphref=profile-service--account.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-detail"></i>
                 <div data-i18n="Form Elements">Account</div>
               </a>
             </li>
 
             <li class="menu-item">
-              <a href="profile-service--change-password.php" class="menu-link">
+              <a href="layout2.php?phphref=profile-service--change-password.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
                 <div data-i18n="Form Elements">Change Password</div>
               </a>
@@ -287,7 +296,7 @@
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Support</span></li>
             <li class="menu-item">
               <a
-                href="support-service--request-form.php"
+                href="layout2.php?phphref=support-service--request-form.php"
                 class="menu-link"
               >
                 <i class="menu-icon tf-icons bx bx-support"></i>
@@ -296,7 +305,7 @@
             </li>
             <li class="menu-item">
               <a
-                href="company-news-service--news-list.php"
+                href="layout2.php?phphref=company-news-service--news-list.php"
                 target="_blank"
                 class="menu-link"
               >
@@ -306,7 +315,7 @@
             </li>
             <li class="menu-item">
               <a
-                href="company-news-service--news-list.php"
+                href="layout2.php?phphref=company-news-service--news-list.php"
                 target="_blank"
                 class="menu-link"
               >
@@ -441,44 +450,41 @@
 
           <!-- / Navbar -->
 
-          <!-- Content wrapper -->
-           <!-- Content -->
-                <p class="text-center">CHECK IN _ TEAM</p>
-            
+
+  
+          <!-- Content -->
+          <div class="content-wrapper">
+            <div class="container-xxl flex-grow-1 container-p-y">
+                
+
+
+
+                            <?php
+                                // if(isset($_GET)){
+                                //     if($_GET["phphref"]=="_profile-service--profile"){
+                                //         include('_profile-service--profile.php');
+                                        
+                                //     }
+                                //     else if($_GET["phphref"]=="_profile-service--account"){
+                                //         include('_profile-service--account.php');
+                                //     }
+                                //     else{
+                                //         include($_GET['phphref']);
+                                //         // echo "NHOI : " .$_GET['phphref'];
+
+                                //     }
+                                    
+                                // }
+                                if(isset($_GET)){
+                                        include($_GET['phphref']);
+                                        // echo "NHOI : " .$_GET['phphref'];
+                                }
+                             ?>
+
+
+            </div>
             <!-- / Content -->
 
-            <!-- Footer -->
-            <footer class="content-footer footer bg-footer-theme">
-              <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
-                <div class="mb-2 mb-md-0">
-                  ©
-                  <script>
-                    document.write(new Date().getFullYear());
-                  </script>
-                  , 
-                  <a href="https://themeselection.com" target="_blank" class="footer-link fw-bolder">Ho Chi Minh</a>
-                </div>
-                <div>
-                  <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
-                  <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
-
-                  <a
-                    href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
-                    target="_blank"
-                    class="footer-link me-4"
-                    >Documentation</a
-                  >
-
-                  <a
-                    href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
-                    target="_blank"
-                    class="footer-link me-4"
-                    >Support</a
-                  >
-                </div>
-              </div>
-            </footer>
-            <!-- / Footer -->
 
             <div class="content-backdrop fade"></div>
           </div>
