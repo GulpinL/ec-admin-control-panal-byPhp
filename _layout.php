@@ -145,7 +145,7 @@
 
 
                         <li class="menu-item">
-                        <a href="_layout.php?phphref=delivery.php" class="menu-link">
+                        <a href="./_layout.php?phphref=delivery.php" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-check-circle"></i>
                             <div data-i18n="Account Settings">Delivery</div>
                         </a>
@@ -154,25 +154,25 @@
 
 
                         <li class="menu-item">
-                        <a href="_layout.php?phphref=order--waiting-order.php" class="menu-link menu-toggle">
+                        <a href="./_layout.php?phphref=order--waiting-order.php" class="menu-link menu-toggle">
                             <i class="menu-icon tf-icons bx bx-briefcase"></i>
                             <!-- <i class='bx bx-signal-5'></i> -->
                             <div data-i18n="Authentications">Order Management</div>
                         </a>
                         <ul class="menu-sub">
                             <li class="menu-item">
-                            <a href="_layout.php?phphref=order--waiting-order.php" class="menu-link" >
+                            <a href="./_layout.php?phphref=order--waiting-order.php" class="menu-link" >
                                 <div data-i18n="Basic">Waiting Order</div>
                             </a>
                             </li>
                             <li class="menu-item">
-                            <a href="_layout.php?phphref=order--deliverying-order.php" class="menu-link" >
+                            <a href="./_layout.php?phphref=order--deliverying-order.php" class="menu-link" >
                                 <div data-i18n="Basic">Delivering Order</div>
                             </a>
                             </li>
 
                             <li class="menu-item">
-                            <a href="_layout.php?phphref=order--canceled-order.php" class="menu-link" >
+                            <a href="./_layout.php?phphref=order--canceled-order.php" class="menu-link" >
                                 <div data-i18n="Basic">Canceled Order</div>
                             </a>
                             </li>
@@ -182,23 +182,23 @@
 
 
                         <li class="menu-item">
-                        <a href="_layout.php?phphref=item-manager--item-list.php" class="menu-link menu-toggle">
+                        <a href="./_layout.php?phphref=item-manager--item-list.php" class="menu-link menu-toggle">
                             <i class="menu-icon tf-icons bx bx-timer"></i>
                             <div data-i18n="Misc">Item Management</div>
                         </a>
                         <ul class="menu-sub">
                             <li class="menu-item">
-                            <a href="_layout.php?phphref=item-manager--item-list.php" class="menu-link">
+                            <a href="./_layout.php?phphref=item-manager--item-list.php" class="menu-link">
                                 <div data-i18n="Error">Item List</div>
                             </a>
                             </li>
                             <li class="menu-item">
-                            <a href="_layout.php?phphref=item-manager--add-item.php" class="menu-link">
+                            <a href="./_layout.php?phphref=item-manager--add-item.php" class="menu-link">
                                 <div data-i18n="Under Maintenance">Add item</div>
                             </a>
                             </li>
                             <li class="menu-item">
-                            <a href="_layout.php?phphref=item-manager--invalid-item.php" class="menu-link">
+                            <a href="./_layout.php?phphref=item-manager--invalid-item.php" class="menu-link">
                                 <div data-i18n="Under Maintenance">Invalid/Reported Item</div>
                             </a>
                             </li>
@@ -211,35 +211,35 @@
                         
                         <!-- holiday -->
                         <li class="menu-item">
-                        <a href="_layout.php?phphref=marketing.php" class="menu-link">
+                        <a href="./_layout.php?phphref=marketing.php" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-calendar"></i>
                             <div data-i18n="Basic">Marketing</div>
                         </a>
                         </li>
                         <!-- day off -->
                         <li class="menu-item">
-                        <a href="_layout.php?phphref=statistic-income--income.php" class="menu-link menu-toggle">
+                        <a href="./_layout.php?phphref=statistic-income--income.php" class="menu-link menu-toggle">
                             <i class="menu-icon tf-icons bx bx-calendar-x"></i>
                             <div data-i18n="User interface">Statistics / Income</div>
                         </a>
                         <ul class="menu-sub">
                             <li class="menu-item">
-                            <a href="_layout.php?phphref=statistic-income--income.php" class="menu-link">
+                            <a href="./_layout.php?phphref=statistic-income--income.php" class="menu-link">
                                 <div data-i18n="Accordion">Income</div>
                             </a>
                             </li>
                             <li class="menu-item">
-                            <a href="_layout.php?phphref=statistic-income--statistics.php" class="menu-link">
+                            <a href="./_layout.php?phphref=statistic-income--statistics.php" class="menu-link">
                                 <div data-i18n="Accordion">Statistics</div>
                             </a>
                             </li>
                             <li class="menu-item">
-                            <a href="_layout.php?phphref=statistic-income--paypal.php" class="menu-link">
+                            <a href="./_layout.php?phphref=statistic-income--paypal.php" class="menu-link">
                                 <div data-i18n="Alerts">Paypal</div>
                             </a>
                             </li>
                             <li class="menu-item">
-                            <a href="_layout.php?phphref=statistic-income--momo.php" class="menu-link">
+                            <a href="./_layout.php?phphref=statistic-income--momo.php" class="menu-link">
                                 <div data-i18n="Alerts">Momo</div>
                             </a>
                             </li>
